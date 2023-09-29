@@ -1,16 +1,16 @@
 def call(String stageName){
 
-  if("${StageName}" == "Build"){
+  if("${stageName}" == "Build"){
     echo "building package"
     sh "mvn package"
     echo "building done"
   }
-   if("${StageName}" == "Test"){
+   if("${stageName}" == "Test"){
     echo "test package"
     sh "mvn sonar:sonar"
-    echo "testing done"
+    echo "desting done"
   }
-   if("${StageName}" == "Deploy"){
+   if("${stageName}" == "Deploy"){
     echo "deploying to nexus"
     sh "mvn deploy"
     echo "deployment done"
