@@ -1,4 +1,4 @@
-def call(string stagename){
+def call(String stagename){
 
   if("${stagename}" == "Build"){
     echo "building package"
