@@ -7,7 +7,7 @@ def call(string stagename){
   }
   else if("${stagename}" == 'Test'){
     echo "test package"
-    sh "mvn package"
+    sh "mvn sonar:sonar"
     echo "test done"
   }
   else if("${stagename}" == 'Deploy'){
