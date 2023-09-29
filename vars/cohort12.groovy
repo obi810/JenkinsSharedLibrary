@@ -1,11 +1,11 @@
 def call(string StageName){
 
-  if("${StageName}" == 'build'){
+  if("${StageName}" == 'Build'){
     echo "building package"
     sh "mvn package"
     echo "build success"
   }
-   if("${StageName}" == 'test'){
+   if("${StageName}" == 'Test'){
     echo "test package"
     sh "mvn sonar:sonar"
     echo "test done"
