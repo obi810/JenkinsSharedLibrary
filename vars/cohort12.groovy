@@ -6,12 +6,12 @@ def call(string StageName){
     echo "build success"
   }
    if("${StageName}" == 'Test'){
-    echo "test package"
+    echo "test with sonarqube"
     sh "mvn sonar:sonar"
     echo "test done"
   }
    if("${StageName}" == 'Deploy'){
-    echo "deployment package"
+    echo "deploying to nexus"
     sh "mvn deploy"
     echo "deployment successful"
   }
