@@ -5,12 +5,12 @@ def call(String stagename){
     sh "mvn package"
     echo "build success"
   }
-   else if("${stagename}" == "Test"){
+   if("${stagename}" == "Test"){
     echo "test package"
     sh "mvn sonar:sonar"
     echo "testing done"
   }
-   else if("${stagename}" == "Deploy"){
+    if("${stagename}" == "Deploy"){
     echo "deploying to nexus"
     sh "mvn deploy"
     echo "deployment successsful"
